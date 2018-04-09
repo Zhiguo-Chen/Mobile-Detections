@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Webcam} from "./webcam";
 
 @Component({
   selector: 'app-vedio-test',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-test.component.css']
 })
 export class VideoTestComponent implements OnInit {
-
+  @ViewChild('webcam') webcamRef: ElementRef;
+  webcam: Webcam;
   constructor() { }
 
   ngOnInit() {
+    this.webcam = new Webcam(this.webcamRef.nativeElement);
+    this.webcam.setup();
   }
 
 }

@@ -1,0 +1,29 @@
+.video-container {
+  margin: 0px auto;
+  width: 500px;
+  text-align: center;
+}
+
+.webcam-box-outer {
+  background: black;
+  border: 1px solid #585858;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 9px;
+}
+
+.webcam-box-inner {
+  border: 1px solid #585858;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 160px;
+}
+
+#webcam {
+  height: 160px;
+  transform: scaleX(-1);
+}
