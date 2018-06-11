@@ -1,0 +1,39 @@
+<div *ngIf="register_need" class="background">
+    <form #form="ngForm" class="page__bd ">
+        <weui-items baseCls="form app-form" id="register_form">
+            <weui-input type="text" name="register_name" [maxLength]="20" [(ngModel)]="user.register_name"
+                        placeholder="请输入用户名"
+                        [required]="false" [showWarnIcon]="true">
+                <label class="weui-label">用户名:<span class="icon_mark">*</span></label>
+            </weui-input>
+
+            <weui-input type="tel" name="register_phone" [(ngModel)]="user.register_phone" placeholder="请输入手机号"
+                        [required]="false">
+                <label class="weui-label">手机号:<span class="icon_mark">*</span></label>
+            </weui-input>
+
+            <weui-input type="email" name="register_email" [(ngModel)]="user.register_email" placeholder="请输入邮箱"
+                        [required]="false">
+                <label class="weui-label">邮箱:<span class="icon_mark">*</span></label>
+            </weui-input>
+
+            <weui-input type="text" name="register_city" [(ngModel)]="user.register_city" placeholder="请输入城市"
+                        [required]="false">
+                <label class="weui-label">城市:<span class="icon_mark">*</span></label>
+            </weui-input>
+
+            <weui-input type="tel" name="referral_phone" [(ngModel)]="user.referral_phone" placeholder="请输入推荐人手机号"
+                        [required]="false">
+                <label class="weui-label">推荐人手机号:</label>
+            </weui-input>
+
+            <div class="weui-btn-area">
+                <p class="error_reminder">{{error_info}}</p>
+                <weui-button color="primary" (click)="toUpdate()" [disabled]="clickSingle"><i class="weui-loading" *ngIf="clickSingle"></i>注册</weui-button>
+            </div>
+        </weui-items>
+    </form>
+</div>
+<div *ngIf="!register_need">
+    <div class="spinner"></div>
+</div>

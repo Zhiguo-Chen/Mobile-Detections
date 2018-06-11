@@ -1,23 +1,26 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {AppComponent} from "./app.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
+import {appLoginRoutes} from "./login/appLogin.routes";
+import {AppLoginComponent} from "./login/appLogin.component";
 
 const routes: Routes = [
-  {
-    path: '',
-    component: AppComponent,
-    children: [
-      {
-        path: '',
-        component: DashboardComponent
-      },
-      {
-        path: 'video-test',
-        loadChildren: 'app/video-test/video-test.module#VideoTestModule'
-      }
-    ]
-  },
+  ...appLoginRoutes,
+  {path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule'},
+  {path: '**', component: AppLoginComponent}
+  // {
+  //   path: '',
+  //   component: AppComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: DashboardComponent
+  //     },
+  //     {
+  //       path: 'video-test',
+  //       loadChildren: 'app/video-test/video-test.module#VideoTestModule'
+  //     }
+  //   ]
+  // },
 
 ];
 

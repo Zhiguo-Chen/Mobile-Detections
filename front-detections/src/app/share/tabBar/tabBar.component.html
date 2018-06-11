@@ -1,0 +1,40 @@
+<weui-tabbar>
+    <a href="javascript:;" class="weui-tabbar__item" routerLink="/dashboard/posnet-detection"
+       routerLinkActive="weui-bar__item_on">
+        <span class="weui-tabbar__icon">
+            <i class="fa fa-home"></i>
+        </span>
+        <p class="weui-tabbar__label">posnet</p>
+    </a>
+    <a href="javascript:;" class="weui-tabbar__item" routerLink="/dashboard/video"
+       routerLinkActive="weui-bar__item_on">
+        <weui-badge *ngIf="unlearnedCoursesNum > 0" dot style="top: -19px; right: -27px; position: relative;">
+        </weui-badge>
+        <span class="weui-tabbar__icon">
+            <i class="fa fa-book"></i>
+        </span>
+        <p class="weui-tabbar__label">Video</p>
+    </a>
+    <!--<a href="javascript:;" class="weui-tabbar__item" routerLink="/dashboard/teacher"-->
+       <!--routerLinkActive="weui-bar__item_on">-->
+        <!--<span class="weui-tabbar__icon">-->
+            <!--<i class="fa fa-graduation-cap"></i>-->
+        <!--</span>-->
+        <!--<p class="weui-tabbar__label">讲师</p>-->
+    <!--</a>-->
+    <!--<a href="javascript:;" class="weui-tabbar__item" routerLink="/dashboard/topic"-->
+       <!--routerLinkActive="weui-bar__item_on">-->
+        <!--<span class="weui-tabbar__icon">-->
+            <!--<i class="fa fa-comments"></i>-->
+        <!--</span>-->
+        <!--<p class="weui-tabbar__label">学习互动</p>-->
+    <!--</a>-->
+
+    <!--<a href="javascript:;" class="weui-tabbar__item" routerLink="/dashboard/aboutMe/userDetail"-->
+       <!--routerLinkActive="weui-bar__item_on">-->
+        <!--<span class="weui-tabbar__icon">-->
+            <!--<i class="fa fa-user-circle-o"></i>-->
+        <!--</span>-->
+        <!--<p class="weui-tabbar__label">个人中心</p>-->
+    <!--</a>-->
+</weui-tabbar>
